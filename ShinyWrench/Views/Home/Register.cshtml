@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Registration";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<div class="container">
+    <form action="/Home/RegisterPost" method="post">
+        <div class="form-group no-margin">
+            <span>Username: </span>
+            <input class="form-control" type="text" name="username" />
+        </div>
+        <div class="form-group no-margin">
+            <span>Password: </span>
+            <input class="form-control" type="text" name="password" />
+        </div>
+        <div class="form-group no-margin">
+            <span>Re-Type Password: </span>
+            <input class="form-control" type="text" name="passwordConfirm" />
+        </div>
+        <input class="form-control login-button" type="submit" value="Submit" />
+    </form>
+</div>
