@@ -21,8 +21,6 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Login", "Login", "Home")</li>
-                    <li>@Html.ActionLink("Register", "Register", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li class="dropdown">
@@ -30,6 +28,9 @@
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Login", "Login", "Home")</li>
                             <li>@Html.ActionLink("Logout", "Logout", "Home")</li>
+                            <li class="divider"></li>
+                            <!--<li class="dropdown-header">Nav header</li>-->
+                            <li>@Html.ActionLink("Register", "Register", "Home")</li>
                         </ul>
                     </li>
                 </ul>

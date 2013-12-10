@@ -36,7 +36,6 @@ namespace WebApplication1.Controllers
             {
                 TempData["LoginBad"] = true;
                 return Redirect("/Home/Login");
-
             }
             TempData["ActiveUser"] = username;
             IssueToken();
@@ -84,6 +83,11 @@ namespace WebApplication1.Controllers
 
             Session["AuthToken"] = "I am here";
 
+            return View();
+        }
+
+        public ActionResult Quizform()
+        {
             return View();
         }
 

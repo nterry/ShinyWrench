@@ -19,7 +19,7 @@ namespace WebApplication1.Lib.Domain.Impl
         public void Apply(object data)
         {
             var serializedObject = JsonConvert.SerializeObject(data);
-            lock (dbPath) { File.AppendAllText(dbPath, serializedObject); }
+            lock (dbPath) { File.AppendAllText(dbPath, string.Format("{0}\n", serializedObject)); }
         }
 
         public T[] Get<T>(Dictionary<string, string> searchFields, Func<string[]> matchSpecifier = null)
