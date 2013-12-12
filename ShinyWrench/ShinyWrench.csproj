@@ -124,6 +124,11 @@
     <Compile Include="Lib\Domain\IDatabaseConnector.cs" />
     <Compile Include="Lib\Domain\Impl\FileBasedDatabaseConnection.cs" />
     <Compile Include="Lib\Domain\Impl\FileBasedDatabaseConnector.cs" />
+    <Compile Include="Lib\Domain\Java\JavaModels\JavaClass.cs" />
+    <Compile Include="Lib\Domain\Java\JavaModels\JavaField.cs" />
+    <Compile Include="Lib\Domain\Java\JavaModels\JavaMember.cs" />
+    <Compile Include="Lib\Domain\Java\JavaModels\JavaMethod.cs" />
+    <Compile Include="Lib\Domain\Java\JavaParsers\JavaParser.cs" />
     <Compile Include="Lib\Domain\Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
