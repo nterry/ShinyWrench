@@ -49,13 +49,15 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ActionResult LoginPost(string username, string password, bool? remember)
         {
-            var result = userDbConnection.Get<User>(new Dictionary<string, string> { { "Username", username }, { "Password", password } });
+            var result = userDbConnection.Get<User>(x => x.Username == username && x.Password == password);
             if (result.Length == 0)
             {
-                TempData["LoginBad"] = true;
+                Session["LoginBad"] = true;
+                //TempData["LoginBad"] = true;
                 return Redirect("/Home/Login");
             }
-            TempData["ActiveUser"] = username;
+            //TempData["ActiveUser"] = username;
+            Session["ActiveUser"] = username;
             IssueToken();
             return Redirect("/");
         }
@@ -112,7 +114,7 @@ namespace WebApplication1.Controllers
         public ActionResult Quizform()
         {
             ViewBag.LoggedIn = (GetRequestTokenOrDefault() != null);
-            ViewBag.Class = dataDbConnection.Get<JavaClass>(new Dictionary<string, string> { { "ClassName", "Puppy" }, { "", "" } });
+            //ViewBag.Class = dataDbConnection.Get<JavaClass>(new Dictionary<string, string> { { "ClassName", "Puppy" }, { "", "" } });
             return View();
         }
 

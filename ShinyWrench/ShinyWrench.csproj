@@ -129,6 +129,8 @@
     <Compile Include="Lib\Domain\Java\JavaModels\JavaMember.cs" />
     <Compile Include="Lib\Domain\Java\JavaModels\JavaMethod.cs" />
     <Compile Include="Lib\Domain\Java\JavaParsers\JavaParser.cs" />
+    <Compile Include="Lib\Domain\Models\IModel.cs" />
+    <Compile Include="Lib\Domain\Models\ModelFunctions.cs" />
     <Compile Include="Lib\Domain\Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
